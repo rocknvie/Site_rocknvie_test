@@ -556,6 +556,7 @@ content: "";
   top: 8px; /* distance depuis le haut de la carte */
   left: 50%;
   transform: translateX(-50%);
+  z-index: 15;
   color: var(--couleurRNV) ;/* vert */
   font-size: 0.7rem;
   white-space: nowrap; /* texte sur une seule ligne */
@@ -650,3 +651,17 @@ content: "";
         animation: none;
       }
     }
+.slideshow {
+  position: relative;
+  width: 100%;
+}
+
+.slideshow .slide {
+  display: none;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.slideshow .slide.active {
+  display: block;
+}
