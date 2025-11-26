@@ -1,6 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
   const groups = document.querySelectorAll(".group");
 
+  // --- Préchargement immédiat de la première image de chaque groupe ---
+  groups.forEach(group => {
+    const firstSlide = group.querySelector(".slideshow .slide");
+    if (firstSlide) {
+      const imgPreload = new Image();
+      imgPreload.src = firstSlide.src;
+      // Affiche la première image directement
+      firstSlide.style.display = "block";
+    }
+  });
+
   groups.forEach(group => {
     const hoverText = group.querySelector(".hover-text");
     const baseImg = group.querySelector("img");
@@ -8,13 +19,18 @@ document.addEventListener("DOMContentLoaded", () => {
     let intervalId = null;
     let current = 0;
 
-    // Affiche une slide
+    // --- Préchargement du reste des images ---
+    slideElems.slice(1).forEach(slide => {
+      const img = new Image();
+      img.src = slide.src;
+      slide.style.display = "none";
+    });
+
     function showSlide(i) {
       slideElems.forEach(el => el.style.display = "none");
       slideElems[i].style.display = "block";
     }
 
-    // Passe à la slide suivante
     function nextSlide() {
       current = (current + 1) % slideElems.length;
       showSlide(current);
@@ -26,14 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (hoverText) hoverText.style.display = "none";
       if (baseImg) baseImg.style.display = "none";
 
-      // Affiche immédiatement la première image
       current = 0;
       showSlide(current);
 
-      // Affiche directement la deuxième image si elle existe
       if (slideElems.length > 1) nextSlide();
 
-      // Démarre le cycle toutes les 2 secondes
       intervalId = setInterval(nextSlide, 2000);
     }
 
@@ -46,11 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (hoverText) hoverText.style.display = "block";
     }
 
-    // Événements desktop
     group.addEventListener("mouseenter", start);
     group.addEventListener("mouseleave", stop);
 
-    // Événements mobile
     group.addEventListener("touchstart", start, { passive: true });
     group.addEventListener("touchend", () => setTimeout(stop, 300));
   });
