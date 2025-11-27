@@ -670,3 +670,7 @@ content: "";
 .slideshow .slide.active {
   display: block;
 }
+.nopaddingtop {
+  padding-top: 10px;
+}
+
