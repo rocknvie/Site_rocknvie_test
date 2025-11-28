@@ -710,12 +710,12 @@ content: "";
   .milestone {
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    /*text-align: center;*/
   }
 
   .milestone_icon {
     margin-right: 0;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     font-size: 2.5rem; /* réduire légèrement */
   }
 
@@ -730,6 +730,6 @@ content: "";
     font-size: 100%;
   } 
   .milestone_content {
-    padding-bottom : 15px;
+    padding-bottom : 25px;
   }
 }

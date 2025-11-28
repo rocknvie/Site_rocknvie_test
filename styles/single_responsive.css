@@ -86,7 +86,8 @@
 {
 	.milestone
 	{
-		padding-left: 100px;
+		padding-left: 20px;
+		/*padding-left: 100px;*/
 	}
 	.footer_lists
 	{
@@ -231,7 +232,7 @@
 	}
 	.home_title
 	{
-		font-size: 36px;
+		/*font-size: 36px;*/
 	}
 	.log_reg
 	{
