@@ -777,6 +777,16 @@ font-size: 3rem;
     border-radius: 50%;
     z-index: 1;
     transform: none; /* pas de translation */
-}
+} 
+ .year-title::after {
+    bottom: auto;        /* désactive la position en bas */
+    left: -25px;         /* place le point à gauche du bloc */
+    top: 50%;            /* centre verticalement par rapport au texte */
+    transform: translateY(-50%); /* ajuste le centrage vertical */
+  }
 
+  .year-title {
+    left: 20px;          /* décale le titre vers la droite si besoin */
+    transform: none;     /* annule le centrage horizontal */
+  }
 }
