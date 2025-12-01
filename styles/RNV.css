@@ -754,9 +754,29 @@ content: "";
 .home_content.titremerci {
         position: relative;
         top: 60px;  /* décale en bas */
-    }
-    .single_content_col
-	{
+}
+
+.single_content_col	{
         margin-top: 10px;
-    }
+}
+
+
+.year-title {
+font-size: 3rem;
+}
+
+.timeline .group.left::before,
+.timeline .group.right::before {
+    left: -9px;      /* positionné à gauche */
+    right: auto;     /* annule le right si présent */
+    top: 25px;
+    width: 15px;
+    height: 15px;
+    background: #000;
+    border: 3px solid var(--couleurRNV);
+    border-radius: 50%;
+    z-index: 1;
+    transform: none; /* pas de translation */
+}
+
 }
