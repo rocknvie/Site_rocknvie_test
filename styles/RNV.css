@@ -746,6 +746,17 @@ content: "";
 }
 .map-frame {
       width: 100%;
-      height: 120vw; /* Ratio approximatif 4:3 ; adapte si besoin */
+      height: 120vw; 
+    }
+.titremerci h1{
+        white-space: normal;
+}
+.home_content.titremerci {
+        position: relative;
+        top: 60px;  /* décale en bas */
+    }
+    .single_content_col
+	{
+        margin-top: 10px;
     }
 }
