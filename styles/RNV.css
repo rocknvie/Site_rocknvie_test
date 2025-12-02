@@ -709,6 +709,8 @@ content: "";
     width: 640px;
     height: 480px;
   }
+  
+  
 @media (max-width: 767.98px) {
   .milestone {
     flex-direction: column;
@@ -789,4 +791,21 @@ font-size: 3rem;
     left: 20px;          /* décale le titre vers la droite si besoin */
     transform: none;     /* annule le centrage horizontal */
   }
+  .FontRetro h1 {
+    font-size: 150%;
+}
+.group .hover-text {
+    display: none;
+  }
+
+  /* Pour éviter que le hover PC déclenche quelque chose sur mobile */
+  .group:hover .slideshow .slide {
+    animation: none !important;
+  }
+
+  /* Style facultatif pour montrer le groupe actif */
+  .group.active-mobile {
+    outline: 3px solid #ffbf00;
+    border-radius: 10px;
+  }   
 }
