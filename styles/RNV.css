@@ -710,12 +710,11 @@ content: "";
     height: 480px;
   }
   
-  
+/*--------------RESPONSIVE--------------*/  
 @media (max-width: 767.98px) {
   .milestone {
     flex-direction: column;
     align-items: center;
-    /*text-align: center;*/
   }
 
   .milestone_icon {
@@ -807,5 +806,15 @@ font-size: 3rem;
   .group.active-mobile {
     outline: 3px solid #ffbf00;
     border-radius: 10px;
-  }   
+  } 
+.group {
+      min-height: 380px;
+      padding: 30px 0;
+      margin-bottom: 70px;
+  }
+ .group img,
+  .group .slideshow .slide {
+      height: 300px;         /* augmente la hauteur visible de l'image */
+      object-fit: cover;     /* évite les déformations */
+  }  
 }
